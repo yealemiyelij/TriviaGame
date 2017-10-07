@@ -4,18 +4,60 @@
 <head>
     <title>My Trvia Game </title>
     <!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 <body>
-    <div class="TriviaContainer">
-        <div id="wrapper">
-            <div class="jumbotron" style="background-color: #20315A ; color: white;">
-                <h1 id="title"> My Trivia Game!</h1>
+    <div class="trivia-game-container">
+        <div class="TriviaContainer">
+            <div id="wrapper">
+                <div class="jumbotron" style="color: white;">
+                    <h1 id="title"> Yealemiyelig Trivia Game!</h1>
+                </div>
+                </br>
+                <div id="subwrapper">
+                    <button id="start"> <strong>Start Game</strong></button>
+                    <button id="instruction-btn" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> <strong>Game Instruction</strong></button>
+                </div>
             </div>
-            <div id="subwrapper">
-                <button id="start"> <strong>Start Game</strong></button>
+        </div>
+
+        </br>
+
+        <!-- Modal -->
+        </br>
+        <div class='hidden' id="controls">
+            <strong>Do you want to Pause or Resume the game, click:</strong>:
+            <button id='pause'>Pause Game</button>
+            <button id='resume'>Resume Game</button>
+        </div>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <strong><h4 class="modal-title">Game Instruction</h4></strong>
+                    </div>
+                    <div class="modal-body">
+                        <ul style='color: black;'>
+                            <li>The question is a general aptitiude type.</li>
+                            <li>The question includes issues about football,Singers, Population size, name of places.</li>
+                            <li>You can pause or resume the game.</li>
+                            <li>You have a total of nine questions.</li>
+                            <li>Once you have selected, you can't change the choices, so be careful!</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
